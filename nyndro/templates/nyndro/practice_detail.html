@@ -1,0 +1,16 @@
+{% block content %}
+<div>
+    <h1>{{ practice.practice_name }}</h1>
+    <p>{{ practice.current_value }} of {{practice.total_value}}</p>
+    <form action="" method=POST>
+        {% csrf_token %}
+            <legend>{{ form }}</legend>
+            {% for radio in form.session_value %}
+                {% if radio.value == 0 %}
+                    <input type="button">
+                {% endif %}
+            {% endfor %}
+        <input type="submit" value="Add" class="btn btn-second"/>
+    </form>
+</div>
+{% endblock %}

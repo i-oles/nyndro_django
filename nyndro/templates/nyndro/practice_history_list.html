@@ -1,0 +1,9 @@
+{% if session_list %}
+    {% for session in session_list %}
+    <ul>
+        <li>{{session}}</li>
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>You are lazy. No practice history.</p>
+{% endif %}

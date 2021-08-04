@@ -1,0 +1,9 @@
+{% if practice_list %}
+    <ul>
+        {% for practice in practice_list %}
+        <li><a href="{% url 'nyndro:practice_detail' practice.id %}">{{ practice.practice_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No practice avaliable</p>
+{% endif %}
